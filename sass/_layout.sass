@@ -1,0 +1,48 @@
+// =====================================================================
+// LAYOUT: header, footer, sidebar, nav, etc
+// =====================================================================
+
+
+body
+    font-family: "Titillium Web"
+    background: $light_grey
+
+header
+    @extend %textOnBlack
+    +mobileTab
+        +position( fixed )
+        top: 0
+        z-index: 9999
+
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2)
+
+    li
+        i.fa
+            padding-right: $space / 2
+
+
+section
+
+    padding-left: $space
+    padding-right: $space
+
+    .wrap
+        +outer-container( rem(1200) )
+        font-size: 1.1rem
+        line-height: 1.5rem
+
+footer
+    @extend %textOnBlack
+    padding: $space 0
+    color: $mid_grey
+    text-align: center
+    font-size: 0.9rem
+
+    a
+        color: $dark_blue
+        text-decoration: none
+        font-weight: bold
+
+.mobile
+    a:focus
+        outline: none

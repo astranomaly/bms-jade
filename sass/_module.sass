@@ -1,0 +1,113 @@
+// =====================================================================
+// MODULES: carousel, thumbnail, button, form, icon, etc
+// =====================================================================
+
+// === IMPORTS === //
+
+@import module/navbar
+@import module/maps
+@import module/button
+
+// === TEMPORARY ITEMS === //
+
+.temp
+    background: rgba(255,0,0,0.5)
+
+
+// === FEATURE === //
+
+.textFeature
+    +span-columns( 12 of 12 )
+    font-weight: bold
+    text-align: justify
+    padding: ($big_space * 0.7) 0
+    color: darken($dark_blue, 5%)
+    +desktop
+        +span-columns( 8 of 12 )
+        +shift(2)
+
+    span
+        text-transform: uppercase
+
+
+// === IMAGES === //
+
+.imgbox
+    +span-columns( 12 of 12 )
+    background: white
+    margin-bottom: $space
+    +tabletDesk
+        box-shadow: 0 10px 10px -8px rgba(0,0,0,0.1)
+
+    /* img
+        +mobile
+            width: 100%
+            margin-bottom: $space
+        +tabletDesk
+            height: auto
+        +tablet
+            +span-columns( 6 of 12 )
+        +desktop
+            +span-columns( 4 of 12 ) */
+
+    .img
+        display: block
+        background: $white_blue
+        +mobile
+            min-height: 200px
+            width: 100%
+        @media (max-width: rem(566)) and (min-width: $mobile_size )
+            min-height: 250px
+            width: 100%
+        @media (min-width: rem(567))
+            +span-columns( 6 of 12 )
+            min-height: 300px
+        +desktop
+            +span-columns( 5 of 12 )
+
+        &.building
+            +centered_img('../img/blackie-mini-storage.jpg')
+        &.bins
+            +centered_img('../img/storage-bins.jpg')
+
+
+    h3, ul
+        padding-right: $space
+        padding-left: 2.5rem
+        +mobile
+            width: 100%
+        @media (max-width: rem(566)) and (min-width: $mobile_size )
+            width: 100%
+        @media (min-width: rem(567))
+            +span-columns( 5 of 12 )
+        +desktop
+            +span-columns( 6 of 12 )
+
+    ul
+        padding-bottom: $space
+        padding-top: $space / 2
+        +mobile
+            box-shadow: 0 10px 10px -8px rgba(0,0,0,0.1)
+    h3
+        margin-top: $space / 1.5
+
+// === BLOCKQUOTES === //
+
+.costBox
+    p
+        +span-columns( 12 of 12 )
+        display: inline-block
+        background: $white_blue
+        color: $dark_grey
+        padding: $space 1rem
+        border-radius: 0.2rem
+        text-align: center
+        font-size: 1.4rem
+
+
+// === SYMBOLS === //
+
+.symb
+    font-family: Baskerville, 'Goudy Old Style', Palatino, serif
+    font-weight: inherit
+    color: inherit

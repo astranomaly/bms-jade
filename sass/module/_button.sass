@@ -1,0 +1,75 @@
+
+$time: 0.3s
+
+%mobileStyle
+	color: white
+	background: $dark_blue
+
+	&:hover
+		background: lighten($dark_blue, 10%)
+
+	> span
+		margin-left: 1.5rem
+
+.button
+	+transition(all $time)
+	float: left
+	display: block
+	width: 100%
+	border: 1px solid $dark_blue
+	vertical-align: middle
+	position: relative
+	z-index: 1
+	backface-visibility: hidden
+	font-smoothing: grayscale
+	border-radius: 5px
+	overflow: hidden
+
+	+mobile
+		@extend %mobileStyle
+	.mobile
+		@extend %mobileStyle
+
+	&:focus
+		outline: none
+
+	&:hover
+		+transition(all $time)
+
+		> span
+			@extend %btn-transform
+
+		.button-icon
+			@extend %btn-transform
+			color: white
+
+	> span
+		+transform(translate3d(-10px, 0, 0))
+		+transition(transform $time)
+		padding: 1rem 2rem
+		vertical-align: middle
+		text-align: center
+		width: 100%
+		display: inline-block
+
+	.button-icon
+		+transition(transform $time)
+		transform: translate3d(0, 0, 0)
+		position: relative
+		top: 2px
+		right: 100px
+		font-size: 1.5rem
+		color: white
+
+body:not(.mobile) .button
+	+tabletDesk
+		color: $dark_blue
+		background: white
+
+		&:hover
+			background: $dark_blue
+			color: white
+
+		> span
+			margin-left: 0.5rem
+

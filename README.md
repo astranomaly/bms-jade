@@ -1,2 +1,2 @@
-# bms-jade
-The non-Wordpress Blackie Mini Storage site
+# Blackie Mini Storage - Jade
+The non-Wordpress [Blackie Mini Storage](https://blackieministorage.com/) site. This is not likely to be helpful to anyone, and is simply provided for reference. This will probably not compile (`.jade` is now `.pug` anyway) and the information contained within is likely out of date. However, the current site (linked above) is still pretty much what the output _would_ look like, despite the code being entirely different.

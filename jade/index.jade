@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+    //- <head>
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='description', content="Large, reasonably priced self storage containers for rent in southwestern Blackie, Alberta")
+        title='Blackie Mini Storage'
+        link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Titillium+Web')
+        link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css')
+        link(rel='stylesheet', href='css/main.css')
+        link(rel='icon', href='favicon.ico')
+        script(src='//code.jquery.com/jquery-2.2.3.min.js')
+        //- MENU RESIZER
+        script $(window).on("load resize",function(e){var more=document.getElementById("js-centered-more");var windowWidth=$(window).width();var moreLeftSideToPageLeftSide=330;var moreLeftSideToPageRightSide=windowWidth-moreLeftSideToPageLeftSide;if(moreLeftSideToPageRightSide<330){$("#js-centered-more .submenu .submenu").removeClass("fly-out-right");$("#js-centered-more .submenu .submenu").addClass("fly-out-left");}if(moreLeftSideToPageRightSide>330){$("#js-centered-more .submenu .submenu").removeClass("fly-out-left");$("#js-centered-more .submenu .submenu").addClass("fly-out-right");}var menuToggle=$("#js-centered-navigation-mobile-menu").unbind();$("#js-centered-navigation-menu").removeClass("show");menuToggle.on("click",function(e){e.preventDefault();$("#js-centered-navigation-menu").slideToggle(function(){if($("#js-centered-navigation-menu").is(":hidden")){$("#js-centered-navigation-menu").removeAttr("style");}});});});
+    //- <body>
+    body
+        //- HEADER
+        header(role='banner')
+            include _nav-menu
+        //- CONTENT
+        main(role='main')
+            //- Home
+            section#home.home
+                .wrap
+                    p.textFeature #[strong Located an hour southeast of Calgary, #[span Blackie Mini Storage] is a locally owned &amp; operated business providing longterm self storage for southern Alberta.]
+            //- Info
+            section#info.info
+                .wrap
+                    .imgbox
+                        .img.building
+                        h3 Features:
+                        ul
+                            li Seventeen storage units available
+                            li Units are 8' x 40' (2.5m x 12m) sea cans
+                            li All-hours access to your storage unit
+                    .imgbox
+                        .img.bins
+                        h3 All storage units are:
+                        ul
+                            li Water tight
+                            li Rodent proof
+                            li On a locked &amp; secured lot
+                    .costBox
+                        p All storage units #[strong $250/mo] + GST
+            //- Location
+            section#location.location
+                #map_canvas.gmap
+                .wrap
+                    //- Map
+
+                    a.button(href='//www.google.ca/maps/dir//1000+Railway+Ave,+Blackie,+AB+T0L+0J0/@50.6056139,-113.6251517,16z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x5371f2c9ffea4427:0xfb4e1ce1d378cae4!2m2!1d-113.6207851!2d50.605614?hl=en')
+                        span Directions
+                            i.fa.fa-map-marker.button-icon(aria-hidden='true')
+                    .addressBox
+                        p 1000, Railway Ave.<br>Blackie, AB &nbsp; T0L 0J0
+            //- CONTACT
+            section#contact.contact
+                .wrap
+                    h1 (403) 601 - 0490
+                    a(href='mailto:blackieministorage@hotmail.com') blackieministorage@hotmail.com
+                    p Our contact hours are 8am&ndash;5pm Monday through Saturday, but access to your storage unit is unrestricted.
+        //- FOOTER
+        footer
+            p #[span.symb &copy;] 2016 David Wright #[span.symb &amp;] Blackie Mini Storage
+            p Site designed by #[a(href='//astranomaly.com') Astranomaly]
+    //- SCRIPTS
+    script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-68115037-2', 'auto');ga('send', 'pageview');
+    script(src='//maps.googleapis.com/maps/api/js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js')
+    //- script(src='./js/main.js')
+    script(src='./js/main.min.js')

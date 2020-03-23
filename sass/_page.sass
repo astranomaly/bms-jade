@@ -1,0 +1,63 @@
+// =====================================================================
+// PAGE: sections
+// =====================================================================
+
++mobileTab
+    main
+        // margin for fixed header
+        margin-top: 6rem
+
+.home
+    background: $white_blue
+
+.info
+    padding-top: $big_space
+
+.location
+    padding: 0
+
+    .gmap
+        border-width: 4px
+        border-left: 0
+        border-right: 0
+        border-color: $dark_blue
+        border-style: solid
+        margin: $big_space 0 1rem 0
+
+    .button
+        +span-columns( 10 of 12 )
+        +shift( 1 )
+
+    .addressBox
+        +span-columns( 12 of 12 )
+
+        p
+            font-weight: bold
+            font-size: 1.3rem
+            display: block
+            width: 11.5rem
+            margin: $space auto
+            position: relative
+
+.contact
+    padding: 3rem 0 3rem 0
+    text-align: center
+    font-weight: bold
+    background: $white_blue
+
+    h1
+        font-size: 2rem
+        padding-bottom: 0.3rem
+
+    a
+        font-size: 1.2rem
+        line-height: 2rem
+        color: $dark_blue
+        text-decoration: none
+
+    p
+        margin: 0 $space
+        padding-top: $space
+        font-weight: normal
+        +mobile
+            text-align: justify

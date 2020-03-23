@@ -1,0 +1,16 @@
+header.centered-navigation(role='banner')
+    .centered-navigation-wrapper
+        a.mobile-logo(href='#home', title='Blackie Mini Storage')
+            img(src='img/logo.png', alt='Blackie Mini Storage logo')
+        a#js-centered-navigation-mobile-menu.centered-navigation-mobile-menu(href='#home', title='Menu') #[i.fa.fa-bars(aria-hidden='true')]
+        nav(role='navigation')
+            .nav-link.logo
+                a.logo(href='#home', title='Blackie Mini Storage')
+                    img(src='img/logo.png',alt='Logo')
+            ul#js-centered-navigation-menu.centered-navigation-menu.show
+                li.nav-link
+                    a(href='#info', title='Info') #[i.fa.fa-info-circle(aria-hidden='true')] Info
+                li.nav-link
+                    a(href='#location', title='Location') #[i.fa.fa-map-marker(aria-hidden='true')] Location
+                li.nav-link
+                    a(href='#contact', title='Contact') #[i.fa.fa-phone-square(aria-hidden='true')] Contact
